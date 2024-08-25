@@ -114,7 +114,7 @@ const Portfolio = () => {
         fontWeight="bold"
         letterSpacing="-0.03em"
       >
-        Here are some projects I've undertaken:
+        Here are some projects I&apos;ve undertaken:
       </Text>
       <Text
         ml={2}
