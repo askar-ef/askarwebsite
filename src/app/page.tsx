@@ -4,7 +4,6 @@ import {
   Text,
   Link,
   Flex,
-  Container,
   VStack,
   Image,
   Button,
@@ -12,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
-import { SiCanva } from "react-icons/si";
 import NextLink from "next/link";
 
 export default function Home() {
@@ -21,7 +19,7 @@ export default function Home() {
       minHeight="100vh"
       alignItems="center"
       justifyContent="center"
-      backgroundColor="gray.100"
+      backgroundImage="linear-gradient(to bottom, #d9dbdc, #ffffff, #ffffff)" // Gradasi dari gray.100 ke abu-abu muda, lalu putih
     >
       <VStack spacing={1} align="center" maxWidth="container.lg">
         <Box>
@@ -34,7 +32,7 @@ export default function Home() {
               mb={2}
             />
             <Box textAlign="left">
-              <NextLink href="/about" passHref>
+              <NextLink href="" passHref>
                 <Link
                   color="gray.600"
                   fontSize="6xl"
