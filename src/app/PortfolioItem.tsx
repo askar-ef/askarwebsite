@@ -138,7 +138,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
 
               <Text
                 mt={2.5}
-                fontSize="xl"
+                fontSize={{ base: "md", md: "xl" }}
                 color="gray.400"
                 maxW="full"
                 lineHeight="1.2"
