@@ -90,22 +90,25 @@ const Portfolio = () => {
 
   return (
     <VStack bg={"gray.100"}>
-      {/* <Box
-        as="img"
-        src="https://i.ibb.co.com/DYLb9wm/ASKAR-BG-WEBSITE.png"
-        alt="Dummy Image"
-        borderRadius="40px" // Membuat sudut gambar rounded
-        padding="20px" // Menambahkan padding di dalam gambar
-      /> */}
       <Text
         ml={2}
         fontSize="8xl"
         color="gray.600"
         fontWeight="bold"
         letterSpacing="-0.03em"
+        mb={-8}
       >
         Portfolio
       </Text>
+
+      <Box
+        as="img"
+        src="https://i.ibb.co.com/Z2fKRrN/Pinkan-View-Desktop.jpg"
+        alt="Portfolio Banner"
+        borderRadius="40px"
+        p={5}
+        style={{ width: "70%", margin: "0 auto" }} // Lebar 50% dari kontainer dan margin auto
+      />
       <Text
         mt={-5}
         ml={2}

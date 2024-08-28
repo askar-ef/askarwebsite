@@ -1,4 +1,3 @@
-// about/page.tsx
 import {
   Box,
   Heading,
@@ -58,6 +57,24 @@ export default function About() {
           </Box>
         </VStack>
       </Flex>
+
+      {/* Chatbot scripts */}
+      <Box
+        dangerouslySetInnerHTML={{
+          __html: `
+            <script>
+              window.embeddedChatbotConfig = {
+                chatbotId: "P3zrHzaz3w2ojdfj4-sZZ",
+                domain: "www.chatbase.co"
+              }
+            </script>
+            <script
+              src="https://www.chatbase.co/embed.min.js"
+              defer
+            ></script>
+          `,
+        }}
+      />
     </Container>
   );
 }

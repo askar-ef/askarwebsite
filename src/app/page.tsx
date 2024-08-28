@@ -88,7 +88,7 @@ export default function Home() {
               colorScheme="black"
               variant="outline"
             >
-              Portfolio
+              Portfolio & Skills
             </Button>
           </NextLink>
         </Flex>
