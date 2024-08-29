@@ -1,17 +1,8 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Link,
-  Flex,
-  VStack,
-  Image,
-  Button,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, Text, Link, Flex, VStack, Image, Button } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import NextLink from "next/link";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default function Home() {
   return (
@@ -30,6 +21,7 @@ export default function Home() {
             align="center"
           >
             <Image
+              mt={5}
               borderRadius="full"
               boxSize={{ base: "150px", md: "250px" }} // Ukuran gambar lebih kecil di layar kecil
               src="https://i.ibb.co.com/MgqnHVQ/ASKAR-TF-AKBAR-2.png"
@@ -106,9 +98,22 @@ export default function Home() {
               variant="outline"
               w={{ base: "full", md: "auto" }} // Tombol akan penuh di layar kecil
             >
-              Portfolio & Skills
+              Portfolio
             </Button>
           </NextLink>
+          <Link
+            href="https://drive.google.com/file/d/19fvPi3JQ67_eyeslFl03QbjFyubGzbYz/view?usp=sharing"
+            isExternal
+          >
+            <Button
+              leftIcon={<IoDocumentTextOutline />}
+              colorScheme="black"
+              variant="outline"
+              w={{ base: "full", md: "auto" }} // Tombol akan penuh di layar kecil
+            >
+              CV
+            </Button>
+          </Link>
         </Flex>
       </VStack>
     </Flex>

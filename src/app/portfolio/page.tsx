@@ -103,7 +103,7 @@ const Portfolio = () => {
 
       <Box
         as="img"
-        src="https://i.ibb.co.com/bb6LjV7/Pinkan-View-Desktop.jpg"
+        src="https://i.ibb.co.com/Z2fKRrN/Pinkan-View-Desktop.jpg"
         alt="Portfolio Banner"
         borderRadius="40px"
         p={5}
