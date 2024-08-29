@@ -1,16 +1,3 @@
-import {
-  Box,
-  Heading,
-  Text,
-  Link,
-  Flex,
-  Container,
-  VStack,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react";
-import CardComponent from "../CardComponent";
-
 export default function About() {
   const cards = [
     {
@@ -26,55 +13,29 @@ export default function About() {
   ];
 
   return (
-    <Container maxW="container.xl" p={4}>
-      <Flex
-        minH="100vh"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
-        textAlign="center"
-      >
-        <VStack spacing={4} align="center">
-          <Heading as="h1" size="2xl">
-            About Me
-          </Heading>
-          <Text fontSize="xl" color="gray.500">
+    <div className="container mx-auto p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center text-center">
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold">About Me</h1>
+          <p className="text-xl text-gray-500">
             Here are some of my experiences and background.
-          </Text>
+          </p>
 
-          <Wrap spacing={8} justify="center" flexWrap="wrap">
+          <div className="flex flex-wrap justify-center gap-8">
             {cards.map((card, index) => (
-              <WrapItem key={index}>
-                {/* <CardComponent card={card} /> */}
-              </WrapItem>
+              <div key={index} className="w-full md:w-auto">
+                {/* Card content */}
+              </div>
             ))}
-          </Wrap>
+          </div>
 
-          <Box>
-            <Link href="/" color="teal.500" fontSize="lg">
+          <div>
+            <a href="/" className="text-lg text-teal-500 hover:text-teal-600">
               Go back to Home
-            </Link>
-          </Box>
-        </VStack>
-      </Flex>
-
-      {/* Chatbot scripts */}
-      <Box
-        dangerouslySetInnerHTML={{
-          __html: `
-            <script>
-              window.embeddedChatbotConfig = {
-                chatbotId: "P3zrHzaz3w2ojdfj4-sZZ",
-                domain: "www.chatbase.co"
-              }
-            </script>
-            <script
-              src="https://www.chatbase.co/embed.min.js"
-              defer
-            ></script>
-          `,
-        }}
-      />
-    </Container>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
