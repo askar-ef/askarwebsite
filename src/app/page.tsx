@@ -12,58 +12,49 @@ import IconCloud from "@/components/ui/icon-cloud";
 import BlurFade from "@/components/ui/blur-fade";
 import { GridPattern } from "@/components/ui/animated-grid-pattern";
 import { CoolMode } from "@/components/ui/cool-mode";
+import Meteors from "@/components/ui/meteors";
+import Particles from "@/components/ui/particles";
 
 const portfolioItems = [
   {
     Icon: CodeIcon,
-    name: "Web Development",
+    name: "Projects",
     description: "Full-stack web applications built with modern technologies.",
     href: "https://github.com/askar-ef",
     cta: "View Projects",
     className: "col-span-3 lg:col-span-2",
     background: (
       <div className="absolute inset-0">
-        <IconCloud
-          iconSlugs={[
-            "typescript",
-            "react",
-            "nextdotjs",
-            "nodejs",
-            "express",
-            "prisma",
-            "tailwindcss",
-          ]}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-50 opacity-50" />
+        <Particles
+          className="absolute inset-0"
+          quantity={50}
+          staticity={30}
+          ease={50}
+          size={0.5}
+          color="#000000"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100 opacity-50" />
       </div>
     ),
   },
   {
     Icon: GlobeIcon,
-    name: "UI/UX Design",
+    name: "Blog",
     description:
       "User-centered design solutions for web and mobile applications.",
     href: "/portfolio/design",
     cta: "See Designs",
     className: "col-span-3 lg:col-span-1",
     background: (
-      <div className="absolute inset-0">
-        <IconCloud
-          iconSlugs={[
-            "figma",
-            "adobexd",
-            "adobephotoshop",
-            "adobeillustrator",
-            "sketch",
-          ]}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-pink-100 opacity-50" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-bl from-pink-100/50 to-pink-50/50" />
+        <Meteors number={20} />
       </div>
     ),
   },
   {
     Icon: BoxIcon,
-    name: "Academic Projects",
+    name: "Experiences",
     description:
       "Research and academic projects from Software Engineering studies.",
     href: "/portfolio/academic",
@@ -74,7 +65,7 @@ const portfolioItems = [
         <IconCloud
           iconSlugs={["python", "java", "cplusplus", "git", "github", "latex"]}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-teal-100 opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-green-100 to-teal-50 opacity-50" />
       </div>
     ),
   },
@@ -130,12 +121,12 @@ const Home = () => {
 
             <BlurFade delay={0}>
               <p className="text-md md:text-sm text-gray-500 max-w-xl">
-                Askar is a second-year student at Gadjah Mada University
-                majoring in Software Engineering. He is an innovative thinker,
-                constantly seeking new ideas. His interests include IT
-                management, mobile software development, and design. Askar has
-                strong public speaking and communication skills and is actively
-                seeking opportunities to advance his career in the IT field.
+                Askar is a third-year student at Gadjah Mada University majoring
+                in Software Engineering. He is an innovative thinker, constantly
+                seeking new ideas. His interests include IT management, mobile
+                software development, and design. Askar has strong public
+                speaking and communication skills and is actively seeking
+                opportunities to advance his career in the IT field.
               </p>
             </BlurFade>
 
