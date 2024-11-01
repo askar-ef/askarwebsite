@@ -11,6 +11,7 @@ import { CodeIcon, GlobeIcon, BoxIcon } from "@radix-ui/react-icons";
 import IconCloud from "@/components/ui/icon-cloud";
 import BlurFade from "@/components/ui/blur-fade";
 import { GridPattern } from "@/components/ui/animated-grid-pattern";
+import { CoolMode } from "@/components/ui/cool-mode";
 
 const portfolioItems = [
   {
@@ -81,6 +82,15 @@ const portfolioItems = [
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
 
+  // Buat SVG particle options
+  const coolModeOptions = {
+    particle: "/next.svg", // akan bergantian dengan vercel.svg
+    size: 25,
+    particleCount: 20,
+    speedHorz: 5,
+    speedUp: 15,
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-100 to-white p-4 flex flex-col justify-center">
       <GridPattern
@@ -92,18 +102,20 @@ const Home = () => {
 
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="relative w-52 h-52 md:w-64 md:h-64">
-            <Image
-              src="/ASKAR-TF-AKBAR-2.png"
-              alt="Profile Picture"
-              layout="fill"
-              className={`rounded-full object-cover transition-all duration-500 ${
-                loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
-              }`}
-              onLoadingComplete={() => setLoaded(true)}
-              priority
-            />
-          </div>
+          <CoolMode options={coolModeOptions}>
+            <div className="relative w-52 h-52 md:w-64 md:h-64 cursor-pointer">
+              <Image
+                src="/ASKAR-TF-AKBAR-2.png"
+                alt="Profile Picture"
+                layout="fill"
+                className={`rounded-full object-cover transition-all duration-500 ${
+                  loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
+                }`}
+                onLoadingComplete={() => setLoaded(true)}
+                priority
+              />
+            </div>
+          </CoolMode>
 
           <div className="text-center md:text-left">
             <BlurFade delay={0.9}>
@@ -117,7 +129,7 @@ const Home = () => {
             </BlurFade>
 
             <BlurFade delay={0}>
-              <p className="text-lg md:text-xl text-gray-500 max-w-xl">
+              <p className="text-md md:text-sm text-gray-500 max-w-xl">
                 Askar is a second-year student at Gadjah Mada University
                 majoring in Software Engineering. He is an innovative thinker,
                 constantly seeking new ideas. His interests include IT
