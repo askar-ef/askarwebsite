@@ -15,6 +15,7 @@ import { CoolMode } from "@/components/ui/cool-mode";
 import Meteors from "@/components/ui/meteors";
 import Particles from "@/components/ui/particles";
 import { AnimatedList } from "@/components/ui/animated-list";
+import RetroGrid from "@/components/ui/retro-grid";
 
 const portfolioItems = [
   {
@@ -63,10 +64,8 @@ const portfolioItems = [
     className: "col-span-3 lg:col-span-3",
     background: (
       <div className="absolute inset-0">
-        <IconCloud
-          iconSlugs={["python", "java", "cplusplus", "git", "github", "latex"]}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-green-100 to-teal-50 opacity-50" />
+        <RetroGrid className="opacity-40" angle={45} />
+        <div className="absolute inset-0 bg-gradient-to-br from-green-100/20 to-teal-400/80 mix-blend-overlay" />
       </div>
     ),
   },
@@ -192,13 +191,10 @@ const Home = () => {
             </BlurFade>
 
             <BlurFade delay={0}>
-              <p className="text-md md:text-sm text-gray-500 max-w-xl">
-                Askar is a third-year student at Gadjah Mada University majoring
-                in Software Engineering. He is an innovative thinker, constantly
-                seeking new ideas. His interests include IT management, mobile
-                software development, and design. Askar has strong public
-                speaking and communication skills and is actively seeking
-                opportunities to advance his career in the IT field.
+              <p className="text-lg md:text-md text-gray-500 max-w-xl">
+                Askar is a third-year student at Universitas Gadjah Mada
+                majoring in Software Engineering. He is an innovative thinker,
+                constantly seeking new ideas, and loves ice cream.
               </p>
             </BlurFade>
 
