@@ -117,9 +117,13 @@ const Home = () => {
             </BlurFade>
 
             <BlurFade delay={0}>
-              <p className="text-base text-gray-500 max-w-xl">
-                Software Engineering student at Gadjah Mada University. An
-                innovative thinker, constantly seeking new ideas.
+              <p className="text-lg md:text-xl text-gray-500 max-w-xl">
+                Askar is a second-year student at Gadjah Mada University
+                majoring in Software Engineering. He is an innovative thinker,
+                constantly seeking new ideas. His interests include IT
+                management, mobile software development, and design. Askar has
+                strong public speaking and communication skills and is actively
+                seeking opportunities to advance his career in the IT field.
               </p>
             </BlurFade>
 
