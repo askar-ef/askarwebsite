@@ -14,6 +14,7 @@ import { GridPattern } from "@/components/ui/animated-grid-pattern";
 import { CoolMode } from "@/components/ui/cool-mode";
 import Meteors from "@/components/ui/meteors";
 import Particles from "@/components/ui/particles";
+import { AnimatedList } from "@/components/ui/animated-list";
 
 const portfolioItems = [
   {
@@ -70,6 +71,61 @@ const portfolioItems = [
     ),
   },
 ];
+
+const socialItems = [
+  {
+    name: "GitHub",
+    description: "@askar-ef",
+    icon: <FaGithub className="text-xl" />,
+    color: "#333",
+    href: "https://github.com/askar-ef",
+  },
+  {
+    name: "LinkedIn",
+    description: "Daffa Askar Fathin",
+    icon: <FaLinkedin className="text-xl" />,
+    color: "#0077B5",
+    href: "https://linkedin.com/in/daffaaskarfathin",
+  },
+  {
+    name: "Portfolio",
+    description: "My Works",
+    icon: <MdOutlineDesignServices className="text-xl" />,
+    color: "#4CAF50",
+    href: "/portfolio",
+  },
+];
+
+const SocialNotification = ({ name, description, icon, color, href }: any) => {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full cursor-pointer"
+    >
+      <div className="flex flex-row items-center gap-2 sm:gap-3">
+        <div
+          className="flex size-8 sm:size-10 items-center justify-center rounded-xl sm:rounded-2xl text-white"
+          style={{ backgroundColor: color }}
+        >
+          {icon}
+        </div>
+        <div className="flex flex-col overflow-hidden">
+          <div className="flex flex-row items-center whitespace-pre">
+            <span className="text-xs sm:text-sm font-medium text-gray-800 dark:text-white">
+              {name}
+            </span>
+          </div>
+          <p className="text-xs sm:text-sm text-gray-500 dark:text-white/60">
+            {description}
+          </p>
+        </div>
+      </div>
+    </a>
+  );
+};
+
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -90,6 +146,22 @@ const Home = () => {
         className="absolute -inset-20 h-[120%] w-[120%] animate-grid-skew"
         strokeDasharray="4 2"
       />
+      <div className="fixed bottom-0 right-0 sm:bottom-2 sm:right-2 z-50">
+        <AnimatedList className="flex flex-row justify-center gap-1">
+          {socialItems.map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center size-6 sm:size-7 rounded-lg text-white"
+              style={{ backgroundColor: item.color }}
+            >
+              <div className="scale-75">{item.icon}</div>
+            </a>
+          ))}
+        </AnimatedList>
+      </div>
 
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">

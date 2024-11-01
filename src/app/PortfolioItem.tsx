@@ -28,32 +28,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({
   const imageRef = useRef(null);
   const { ref, inView } = useInView({ threshold: 0.5 });
 
-  // useEffect(() => {
-  //   if (!inView) return;
-
-  //   const imageTimeline = gsap.timeline({ paused: true });
-
-  //   imageTimeline
-  //     .fromTo(
-  //       imageRef.current,
-  //       { scale: 0.9 },
-  //       { scale: 1, duration: 1.2, ease: "power3.out" }
-  //     )
-  //     .fromTo(
-  //       imageRef.current,
-  //       { opacity: 0 },
-  //       { opacity: 1, duration: 1.2, ease: "power3.out" }
-  //     );
-
-  //   if (inView) {
-  //     imageTimeline.play();
-  //   }
-
-  //   return () => {
-  //     imageTimeline.kill();
-  //   };
-  // }, [inView]);
-
   const handleHover = () => {
     gsap.to(imageRef.current, {
       scale: 1.1,
