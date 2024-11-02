@@ -23,17 +23,17 @@ export default function RetroGrid({
         <div
           className={cn(
             "animate-grid",
-            "[background-repeat:repeat] [background-size:60px_60px] [height:300vh] [inset:0%_0px] [margin-left:-50%] [transform-origin:100%_0_0] [width:600vw]",
+            "[background-repeat:repeat] [background-size:60px_60px] [height:500vh] [inset:0%_0px] [margin-left:-100%] [transform-origin:100%_0_0] [width:800vw]",
             // Light Styles
-            "[background-image:linear-gradient(to_right,rgba(0,0,0,0.3)_1px,transparent_0),linear-gradient(to_bottom,rgba(0,0,0,0.3)_1px,transparent_0)]",
+            "[background-image:linear-gradient(to_right,#374151_1px,transparent_0),linear-gradient(to_bottom,#374151_1px,transparent_0)]",
             // Dark styles
-            "dark:[background-image:linear-gradient(to_right,rgba(255,255,255,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(255,255,255,0.5)_1px,transparent_0)]"
+            "dark:[background-image:linear-gradient(to_right,#ffffff_1px,transparent_0),linear-gradient(to_bottom,#ffffff_1px,transparent_0)]"
           )}
         />
       </div>
 
       {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-teal-50/50 to-transparent to-90% dark:from-teal-900/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-teal-50/30 via-transparent to-transparent dark:from-teal-900/20" />
     </div>
   );
 }
