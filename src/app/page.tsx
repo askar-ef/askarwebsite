@@ -16,6 +16,7 @@ import Meteors from "@/components/ui/meteors";
 import Particles from "@/components/ui/particles";
 import { AnimatedList } from "@/components/ui/animated-list";
 import RetroGrid from "@/components/ui/retro-grid";
+import { motion } from "framer-motion";
 
 const portfolioItems = [
   {
@@ -137,6 +138,22 @@ const Home = () => {
     speedUp: 15,
   };
 
+  const socialButtonVariants = {
+    hidden: {
+      x: 100, // Mulai dari kanan
+      opacity: 0,
+    },
+    visible: (i: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 3 + i * 0.2, // Delay 2.5s + stagger untuk tiap item
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-100 to-white p-4 flex flex-col justify-center">
       <GridPattern
@@ -145,22 +162,30 @@ const Home = () => {
         className="absolute -inset-20 h-[120%] w-[120%] animate-grid-skew"
         strokeDasharray="4 2"
       />
-      <div className="fixed bottom-0 right-0 sm:bottom-2 sm:right-2 z-50">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        className="fixed bottom-0 right-0 sm:bottom-2 sm:right-2 z-50"
+      >
         <AnimatedList className="flex flex-row justify-center gap-1">
           {socialItems.map((item, idx) => (
-            <a
+            <motion.a
               key={idx}
+              custom={idx}
+              variants={socialButtonVariants}
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center size-6 sm:size-7 rounded-lg text-white"
               style={{ backgroundColor: item.color }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               <div className="scale-75">{item.icon}</div>
-            </a>
+            </motion.a>
           ))}
         </AnimatedList>
-      </div>
+      </motion.div>
 
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
