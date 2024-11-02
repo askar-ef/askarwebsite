@@ -165,17 +165,32 @@ const Home = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <CoolMode options={coolModeOptions}>
-            <div className="relative w-52 h-52 md:w-64 md:h-64 cursor-pointer">
-              <Image
-                src="/ASKAR-TF-AKBAR-2.png"
-                alt="Profile Picture"
-                layout="fill"
-                className={`rounded-full object-cover transition-all duration-500 ${
-                  loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
-                }`}
-                onLoadingComplete={() => setLoaded(true)}
-                priority
-              />
+            <div className="relative w-52 h-52 md:w-64 md:h-64 cursor-pointer [perspective:1000px]">
+              <div className="relative w-full h-full transition-all duration-700 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+                {/* Front face */}
+                <div className="absolute inset-0 [backface-visibility:hidden]">
+                  <Image
+                    src="/ASKAR-TF-AKBAR-2.png"
+                    alt="Profile Picture Front"
+                    layout="fill"
+                    className={`rounded-full object-cover transition-all duration-500 ${
+                      loaded ? "opacity-100 blur-0" : "opacity-0 blur-lg"
+                    }`}
+                    onLoadingComplete={() => setLoaded(true)}
+                    priority
+                  />
+                </div>
+                {/* Back face */}
+                <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <Image
+                    src="/ASKAR-DSSDI.jpg"
+                    alt="Profile Picture Back"
+                    layout="fill"
+                    className="rounded-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           </CoolMode>
 
@@ -197,30 +212,6 @@ const Home = () => {
                 constantly seeking new ideas, and loves ice cream.
               </p>
             </BlurFade>
-
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              <SocialButton
-                href="https://github.com/askar-ef"
-                icon={<FaGithub />}
-                label="GitHub"
-              />
-              <SocialButton
-                href="https://linkedin.com/in/daffaaskarfathin"
-                icon={<FaLinkedin />}
-                label="LinkedIn"
-              />
-              <SocialButton
-                href="/portfolio"
-                icon={<MdOutlineDesignServices />}
-                label="Portfolio"
-                internal
-              />
-              <SocialButton
-                href="https://drive.google.com/file/d/19fvPi3JQ67_eyeslFl03QbjFyubGzbYz/view"
-                icon={<IoDocumentTextOutline />}
-                label="CV"
-              />
-            </div>
           </div>
         </div>
       </div>
