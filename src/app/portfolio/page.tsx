@@ -26,7 +26,7 @@ const Portfolio = () => {
       <div className="relative z-50 pt-6 pb-2">
         <div className="container mx-auto px-4">
           <motion.h1
-            className="text-6xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600 mb-8"
+            className="text-6xl md:text-9xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -34,9 +34,9 @@ const Portfolio = () => {
             Portfolio
           </motion.h1>
 
-          <div className="max-w-2xl mx-auto mb-12">
+          <div className="max-w-2xl mx-auto mb-10">
             <motion.p
-              className="text-xl text-center text-gray-600 mb-4 font-medium"
+              className="text-xl text-center text-gray-600 font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}

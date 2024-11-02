@@ -21,8 +21,8 @@ const portfolioItems = [
   {
     Icon: CodeIcon,
     name: "Projects",
-    description: "Full-stack web applications built with modern technologies.",
-    href: "https://github.com/askar-ef",
+    description: "Collection of technology projects I have worked on.",
+    href: "/portfolio",
     cta: "View Projects",
     className: "col-span-3 lg:col-span-2",
     background: (
@@ -43,14 +43,14 @@ const portfolioItems = [
     Icon: GlobeIcon,
     name: "Blog",
     description:
-      "User-centered design solutions for web and mobile applications.",
-    href: "/portfolio/design",
-    cta: "See Designs",
+      "Personal thoughts and stories about life, technology, and my insights.",
+    href: "/blog",
+    cta: "Read Blog",
     className: "col-span-3 lg:col-span-1",
     background: (
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-bl from-pink-100/50 to-pink-50/50" />
-        <Meteors number={20} />
+        <Meteors number={30} />
       </div>
     ),
   },
@@ -59,8 +59,8 @@ const portfolioItems = [
     name: "Experiences",
     description:
       "Research and academic projects from Software Engineering studies.",
-    href: "/portfolio/academic",
-    cta: "Learn More",
+    href: "/experiences",
+    cta: "Know More",
     className: "col-span-3 lg:col-span-3",
     background: (
       <div className="absolute inset-0">

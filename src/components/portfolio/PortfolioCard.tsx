@@ -15,30 +15,35 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
   return (
     <motion.div
       id={item.title}
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
     >
-      <div className="bg-white/10 backdrop-blur-md rounded-xl shadow-md overflow-hidden border border-white/20">
-        <div className="grid md:grid-cols-4 gap-2 p-3">
-          <div className="md:col-span-1 relative aspect-[16/9] rounded-lg overflow-hidden scale-95">
+      <div className="bg-white/5 backdrop-blur-sm rounded-md shadow-md overflow-hidden border border-white/10">
+        <div className="flex flex-col md:grid md:grid-cols-5 gap-4 p-4">
+          <div className="w-full md:col-span-2 relative min-h-[200px] md:min-h-[250px] rounded-sm overflow-hidden">
             <Image
               src={item.imageUrl}
               alt={item.title}
               fill
-              className="object-cover opacity-90"
+              className="object-cover hover:scale-105 transition-transform duration-300"
+              sizes="(max-width: 768px) 100vw, 40vw"
+              style={{ objectFit: "cover" }}
+              priority
             />
           </div>
-          <div className="md:col-span-3 flex flex-col h-full">
+          <div className="w-full md:col-span-3 flex flex-col space-y-3 py-2">
             <div className="flex items-center gap-3">
-              <Image
-                src={item.logo}
-                alt={`${item.title} logo`}
-                width={28}
-                height={28}
-                className="object-contain opacity-90"
-              />
+              <div className="relative w-10 h-10 flex-shrink-0">
+                <Image
+                  src={item.logo}
+                  alt={`${item.title} logo`}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-800">
                   {item.title}
@@ -46,8 +51,8 @@ export function PortfolioCard({ item }: { item: PortfolioItem }) {
                 <p className="text-gray-600">{item.year}</p>
               </div>
             </div>
-            <p className="text-gray-500 text-md mt-4">{item.description}</p>
-            <div className="mt-auto">
+            <p className="text-gray-500 text-md">{item.description}</p>
+            <div className="mt-auto pt-2">
               <p className="font-semibold text-gray-600">{item.role}</p>
               <p className="text-gray-400 text-sm italic">{item.detail}</p>
             </div>
