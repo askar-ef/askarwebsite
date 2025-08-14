@@ -1,5 +1,27 @@
 export const portfolioItems = [
   {
+    title: "Veristable",
+    year: "2025",
+    description:
+      "Veristable is a Web3 RWA dApp that lets users mint real-world assets privately, without revealing their identity. Using zkTLS, asset existence and value are cryptographically verified — ensuring trust while preserving privacy.",
+    imageUrl: "/portfolio/Veristable-Portfolio.png",
+    role: "As Web3 & Smart Contract Developer",
+    detail:
+      "Smart Contract Development, Web3 Development, Idea Brainstorming, Workflow Design",
+    logo: "/portfolio/VERISTABLE-LOGO.png",
+  },
+  {
+    title: "Clapeyron Media",
+    year: "2025",
+    description:
+      "Clapeyron Media is a media platform focused on civil engineering, construction, and urban development. It covers news, field reports, public issues, and academic activities at Gadjah Mada University.",
+    imageUrl: "/portfolio/Clapeyron-Portfolio.png",
+    role: "As Web Developer",
+    detail:
+      "Fixing Bug, Database Management, UI/UX Design, Performance Optimization, SEO Optimization",
+    logo: "/portfolio/CLAPEYRON-LOGO.png",
+  },
+  {
     title: "PINKAN",
     year: "2024",
     description:

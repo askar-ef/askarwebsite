@@ -221,7 +221,7 @@ const Home = () => {
 
           <div className="text-center md:text-left">
             <BlurFade delay={0.9}>
-              <p className="text-pretty text-gray-700">Salam kenal 👋🏻</p>
+              <p className="text-pretty text-gray-700">hi, everyone! 👋🏻</p>
             </BlurFade>
 
             <BlurFade delay={0}>
@@ -232,9 +232,12 @@ const Home = () => {
 
             <BlurFade delay={0}>
               <p className="text-lg md:text-md text-gray-500 max-w-xl">
-                Askar is a third-year student at Universitas Gadjah Mada
-                majoring in Software Engineering. He is an innovative thinker,
-                constantly seeking new ideas, and loves ice cream.
+                Askar is a final-year Software Engineering student at Gadjah
+                Mada University who’s passionate about Web3, blockchain, and the
+                future of fintech. He’s on a mission to become a Web3 developer,
+                learning everything from smart contracts to decentralized apps
+                while blending tech skills with a love for clean, user-friendly
+                design.
               </p>
             </BlurFade>
           </div>
